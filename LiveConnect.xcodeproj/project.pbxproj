@@ -16,6 +16,10 @@
 		CBC85F6427B73F7A0043093A /* LiveConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC85F6327B73F7A0043093A /* LiveConnectTests.swift */; };
 		CBC85F6E27B73F7A0043093A /* LiveConnectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC85F6D27B73F7A0043093A /* LiveConnectUITests.swift */; };
 		CBC85F7027B73F7A0043093A /* LiveConnectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC85F6F27B73F7A0043093A /* LiveConnectUITestsLaunchTests.swift */; };
+		CBC85F7D27B748490043093A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC85F7C27B748490043093A /* LogInViewController.swift */; };
+		CBC85F7F27B748550043093A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC85F7E27B748540043093A /* SignUpViewController.swift */; };
+		CBC85F8127B748610043093A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC85F8027B748610043093A /* HomeViewController.swift */; };
+		CBC85F8527B74F370043093A /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC85F8427B74F370043093A /* UserInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		CBC85F6927B73F7A0043093A /* LiveConnectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiveConnectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC85F6D27B73F7A0043093A /* LiveConnectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveConnectUITests.swift; sourceTree = "<group>"; };
 		CBC85F6F27B73F7A0043093A /* LiveConnectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveConnectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CBC85F7C27B748490043093A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		CBC85F7E27B748540043093A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CBC85F8027B748610043093A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CBC85F8427B74F370043093A /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +107,14 @@
 		CBC85F4B27B73F780043093A /* LiveConnect */ = {
 			isa = PBXGroup;
 			children = (
+				CBC85F8327B74F240043093A /* New Group */,
 				CBC85F4C27B73F780043093A /* AppDelegate.swift */,
 				CBC85F4E27B73F780043093A /* SceneDelegate.swift */,
-				CBC85F5027B73F780043093A /* ViewController.swift */,
 				CBC85F5227B73F780043093A /* Main.storyboard */,
 				CBC85F5527B73F7A0043093A /* Assets.xcassets */,
 				CBC85F5727B73F7A0043093A /* LaunchScreen.storyboard */,
 				CBC85F5A27B73F7A0043093A /* Info.plist */,
+				CBC85F8227B748C90043093A /* ViewControllers */,
 			);
 			path = LiveConnect;
 			sourceTree = "<group>";
@@ -125,6 +134,25 @@
 				CBC85F6F27B73F7A0043093A /* LiveConnectUITestsLaunchTests.swift */,
 			);
 			path = LiveConnectUITests;
+			sourceTree = "<group>";
+		};
+		CBC85F8227B748C90043093A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CBC85F7C27B748490043093A /* LogInViewController.swift */,
+				CBC85F8027B748610043093A /* HomeViewController.swift */,
+				CBC85F7E27B748540043093A /* SignUpViewController.swift */,
+				CBC85F8427B74F370043093A /* UserInfoViewController.swift */,
+				CBC85F5027B73F780043093A /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CBC85F8327B74F240043093A /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBC85F7D27B748490043093A /* LogInViewController.swift in Sources */,
+				CBC85F8527B74F370043093A /* UserInfoViewController.swift in Sources */,
 				CBC85F5127B73F780043093A /* ViewController.swift in Sources */,
 				CBC85F4D27B73F780043093A /* AppDelegate.swift in Sources */,
 				CBC85F4F27B73F780043093A /* SceneDelegate.swift in Sources */,
+				CBC85F7F27B748550043093A /* SignUpViewController.swift in Sources */,
+				CBC85F8127B748610043093A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
