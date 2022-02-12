@@ -226,8 +226,35 @@
                     <view key="view" contentMode="scaleToFill" id="fou-gC-hHy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JrO-qz-lB5">
+                                <rect key="frame" x="40" y="84" width="334" height="286.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lets Get to Know You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HB7-2v-Kgf">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cb9-hG-h4u">
+                                        <rect key="frame" x="0.0" y="20.5" width="334" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WnK-Ta-Mih">
+                                        <rect key="frame" x="0.0" y="70" width="334" height="216"/>
+                                    </pickerView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ZqN-e0-3vg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JrO-qz-lB5" firstAttribute="leading" secondItem="ZqN-e0-3vg" secondAttribute="leading" constant="40" id="DTl-pB-X0r"/>
+                            <constraint firstItem="JrO-qz-lB5" firstAttribute="top" secondItem="ZqN-e0-3vg" secondAttribute="top" constant="40" id="IyH-ly-iIh"/>
+                            <constraint firstItem="ZqN-e0-3vg" firstAttribute="trailing" secondItem="JrO-qz-lB5" secondAttribute="trailing" constant="40" id="gMI-fC-wJT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="z1m-zB-ApI"/>
                 </viewController>
