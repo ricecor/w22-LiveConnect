@@ -9,10 +9,7 @@ import UIKit
 
 class UserInfoViewController: UIViewController {
 
-    @IBOutlet weak var GenderPicker: UIPickerView!
-    @IBOutlet weak var AgePicker: UIPickerView!
-    @IBOutlet weak var DoneButton: UIButton!
-    override func viewDidLoad() {
+override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

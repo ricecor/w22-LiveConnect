@@ -88,6 +88,10 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Log In">
                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="LogInTapped:" destination="rMN-Pc-3ok" eventType="touchUpInside" id="5uF-XH-ueb"/>
+                                            <segue destination="EFz-fL-hlb" kind="show" id="N7j-2K-Hj1"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Warning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doW-pK-7rJ">
                                         <rect key="frame" x="0.0" y="180" width="334" height="20.5"/>
@@ -111,6 +115,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ORs-Nb-4SR"/>
+                    <connections>
+                        <outlet property="Email" destination="qkp-RY-B3h" id="qM8-VL-9YF"/>
+                        <outlet property="ErrorLabel" destination="doW-pK-7rJ" id="LDL-YG-ntr"/>
+                        <outlet property="LogInButton" destination="TAn-pV-2Ed" id="dr0-xo-0Fq"/>
+                        <outlet property="Password" destination="TBz-i6-Cym" id="qX6-L9-UJd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LEg-wE-iXF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -121,15 +131,56 @@
             <objects>
                 <viewController id="EFz-fL-hlb" customClass="HomeViewController" customModule="LiveConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5aM-O6-kfa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Have No Groups!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFE-bb-LSI">
+                                <rect key="frame" x="125.5" y="389" width="163" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avw-0w-0gh">
+                                <rect key="frame" x="327" y="44" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Create"/>
+                                <connections>
+                                    <segue destination="e1K-y2-scZ" kind="show" id="VRe-AX-bhP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jd3-i7-lHN">
+                                <rect key="frame" x="3" y="44" width="78" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Settings"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get started by tapping the Create Button at the top." textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z07-cr-iOc">
+                                <rect key="frame" x="8" y="467" width="395" height="73"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="TaT-Aj-F5M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cFE-bb-LSI" firstAttribute="centerY" secondItem="TaT-Aj-F5M" secondAttribute="centerY" constant="-4.5" id="0wF-rM-fb3"/>
+                            <constraint firstItem="TaT-Aj-F5M" firstAttribute="trailing" secondItem="Z07-cr-iOc" secondAttribute="trailing" constant="11" id="2kD-3U-Mux"/>
+                            <constraint firstItem="cFE-bb-LSI" firstAttribute="centerX" secondItem="TaT-Aj-F5M" secondAttribute="centerX" id="ChY-KQ-y85"/>
+                            <constraint firstItem="Z07-cr-iOc" firstAttribute="top" secondItem="cFE-bb-LSI" secondAttribute="bottom" constant="57" id="EJC-Hp-peH"/>
+                            <constraint firstItem="avw-0w-0gh" firstAttribute="top" secondItem="TaT-Aj-F5M" secondAttribute="top" constant="44" id="LNR-3w-72x"/>
+                            <constraint firstItem="avw-0w-0gh" firstAttribute="baseline" secondItem="jd3-i7-lHN" secondAttribute="baseline" id="Vog-Vh-D3n"/>
+                            <constraint firstItem="avw-0w-0gh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jd3-i7-lHN" secondAttribute="trailing" constant="8" symbolic="YES" id="WTx-Sa-LzA"/>
+                            <constraint firstItem="Z07-cr-iOc" firstAttribute="leading" secondItem="TaT-Aj-F5M" secondAttribute="leading" constant="8" id="bKc-Te-e96"/>
+                            <constraint firstItem="TaT-Aj-F5M" firstAttribute="bottom" secondItem="Z07-cr-iOc" secondAttribute="bottom" constant="268" id="d2I-BK-Tdd"/>
+                            <constraint firstItem="jd3-i7-lHN" firstAttribute="leading" secondItem="TaT-Aj-F5M" secondAttribute="leading" constant="3" id="d6x-3U-SLe"/>
+                            <constraint firstItem="avw-0w-0gh" firstAttribute="trailing" secondItem="5aM-O6-kfa" secondAttribute="trailingMargin" id="l5X-hm-eyx"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="BiC-Bf-5dv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEQ-Mj-gyI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2752" y="68"/>
+            <point key="canvasLocation" x="2750.7246376811595" y="67.633928571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LxA-iu-Uj0">
@@ -189,6 +240,7 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="NextTapped:" destination="LPT-PP-fE0" eventType="touchUpInside" id="Usu-Cs-JAW"/>
                                             <segue destination="x2y-8u-csp" kind="show" id="XhT-ou-W4H"/>
                                         </connections>
                                     </button>
@@ -216,6 +268,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GxM-ud-FIB"/>
+                    <connections>
+                        <outlet property="Email" destination="f3I-FH-tem" id="KOw-cH-QlF"/>
+                        <outlet property="ErrorMessage" destination="zVY-4k-aZZ" id="COt-7w-dsR"/>
+                        <outlet property="First" destination="cQe-9g-IF1" id="FrH-fw-6Yr"/>
+                        <outlet property="Last" destination="0hP-VS-feB" id="og1-s6-i0C"/>
+                        <outlet property="NextButton" destination="00X-rf-hki" id="7Yc-BP-EEO"/>
+                        <outlet property="Password" destination="TWY-Ml-JL8" id="Sgj-XN-BAh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yaz-IC-mll" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -275,17 +335,94 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="z1m-zB-ApI"/>
-                    <connections>
-                        <outlet property="AgePicker" destination="cFc-J4-qTj" id="Hfc-tu-QED"/>
-                        <outlet property="DoneButton" destination="Ixc-EJ-K18" id="cqE-LT-Cnn"/>
-                        <outlet property="GenderPicker" destination="WnK-Ta-Mih" id="xDF-kb-YSa"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebe-ON-d9F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1712" y="1192"/>
         </scene>
+        <!--Template View Controller-->
+        <scene sceneID="7eI-yW-TFy">
+            <objects>
+                <viewController id="e1K-y2-scZ" customClass="TemplateViewController" customModule="LiveConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="har-e5-4kv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kav-7J-JaL">
+                                <rect key="frame" x="40" y="30" width="344" height="72.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="New Event" borderStyle="roundedRect" placeholder="Event Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AYS-ZO-9g9">
+                                        <rect key="frame" x="0.0" y="0.0" width="344" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5nF-Q7-vPn">
+                                        <rect key="frame" x="0.0" y="38.5" width="344" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XGM-sF-ZFu">
+                                <rect key="frame" x="40" y="132.5" width="334" height="289"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When is the event?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbp-IN-OUx">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can change this time later " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANW-QO-Xbs">
+                                        <rect key="frame" x="0.0" y="20.5" width="334" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kce-Pt-Y2T">
+                                        <rect key="frame" x="0.0" y="41" width="334" height="216"/>
+                                    </datePicker>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0HZ-Xb-AWN">
+                                        <rect key="frame" x="0.0" y="257" width="334" height="32"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqj-eO-kf1">
+                                                <rect key="frame" x="0.0" y="0.0" width="167" height="32"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=" Cancel"/>
+                                                <connections>
+                                                    <segue destination="EFz-fL-hlb" kind="show" id="IGB-EK-Yzl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4W-af-I6k">
+                                                <rect key="frame" x="167" y="0.0" width="167" height="32"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=" Create!"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CJm-dl-EzT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CJm-dl-EzT" firstAttribute="trailing" secondItem="kav-7J-JaL" secondAttribute="trailing" constant="30" id="MIS-cM-yTE"/>
+                            <constraint firstItem="CJm-dl-EzT" firstAttribute="trailing" secondItem="XGM-sF-ZFu" secondAttribute="trailing" constant="40" id="YYl-wK-JXs"/>
+                            <constraint firstItem="XGM-sF-ZFu" firstAttribute="top" secondItem="kav-7J-JaL" secondAttribute="bottom" constant="30" id="ZWf-Wx-tL6"/>
+                            <constraint firstItem="XGM-sF-ZFu" firstAttribute="top" secondItem="kav-7J-JaL" secondAttribute="bottom" constant="30" id="h6R-Ye-sXb"/>
+                            <constraint firstItem="XGM-sF-ZFu" firstAttribute="leading" secondItem="CJm-dl-EzT" secondAttribute="leading" constant="40" id="hbU-8I-oet"/>
+                            <constraint firstItem="kav-7J-JaL" firstAttribute="leading" secondItem="CJm-dl-EzT" secondAttribute="leading" constant="40" id="iaa-Ce-Teo"/>
+                            <constraint firstItem="kav-7J-JaL" firstAttribute="top" secondItem="CJm-dl-EzT" secondAttribute="top" constant="30" id="vmv-gk-Hlz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WHj-b1-tkg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gOF-7N-HXy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3620" y="-11"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="VRe-AX-bhP"/>
+        <segue reference="IGB-EK-Yzl"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

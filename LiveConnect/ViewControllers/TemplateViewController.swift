@@ -1,21 +1,14 @@
 //
-//  SignUpViewController.swift
+//  TemplateViewController.swift
 //  LiveConnect
 //
-//  Created by Jake Stone on 2/11/22.
+//  Created by Jake Stone on 2/13/22.
 //
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class TemplateViewController: UIViewController {
 
-    @IBOutlet weak var First: UITextField!
-    @IBOutlet weak var Last: UITextField!
-    @IBOutlet weak var Email: UITextField!
-    @IBOutlet weak var Password: UITextField!
-    @IBOutlet weak var NextButton: UIButton!
-    @IBOutlet weak var ErrorMessage: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +26,4 @@ class SignUpViewController: UIViewController {
     }
     */
 
-    @IBAction func NextTapped(_ sender: Any) {
-    }
 }
