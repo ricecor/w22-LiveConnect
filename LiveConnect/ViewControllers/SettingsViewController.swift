@@ -1,5 +1,5 @@
 //
-//  TemplateViewController.swift
+//  SettingsViewController.swift
 //  LiveConnect
 //
 //  Created by Jake Stone on 2/13/22.
@@ -7,14 +7,8 @@
 
 import UIKit
 
-class TemplateViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
-    @IBOutlet weak var EventName: UITextField!
-    @IBOutlet weak var Description: UITextField!
-    @IBOutlet weak var DatePicker: UIDatePicker!
-    @IBOutlet weak var CreateButton: UIButton!
-    @IBOutlet weak var CancelButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

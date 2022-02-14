@@ -18,9 +18,10 @@
 		CBC85F7027B73F7A0043093A /* LiveConnectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC85F6F27B73F7A0043093A /* LiveConnectUITestsLaunchTests.swift */; };
 		CBC85F7F27B748550043093A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC85F7E27B748540043093A /* SignUpViewController.swift */; };
 		CBC85F8127B748610043093A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC85F8027B748610043093A /* HomeViewController.swift */; };
-		CBC85F8527B74F370043093A /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC85F8427B74F370043093A /* UserInfoViewController.swift */; };
 		CBC85F8727B769FF0043093A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC85F8627B769FF0043093A /* LogInViewController.swift */; };
 		CBC85F8927B97DEA0043093A /* TemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC85F8827B97DEA0043093A /* TemplateViewController.swift */; };
+		CBC85F8B27BA06C50043093A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC85F8A27BA06C50043093A /* SettingsViewController.swift */; };
+		CBC85F8D27BA08650043093A /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC85F8C27BA08650043093A /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,9 +57,10 @@
 		CBC85F6F27B73F7A0043093A /* LiveConnectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveConnectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CBC85F7E27B748540043093A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CBC85F8027B748610043093A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		CBC85F8427B74F370043093A /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		CBC85F8627B769FF0043093A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		CBC85F8827B97DEA0043093A /* TemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateViewController.swift; sourceTree = "<group>"; };
+		CBC85F8A27BA06C50043093A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CBC85F8C27BA08650043093A /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +145,9 @@
 				CBC85F8827B97DEA0043093A /* TemplateViewController.swift */,
 				CBC85F8027B748610043093A /* HomeViewController.swift */,
 				CBC85F7E27B748540043093A /* SignUpViewController.swift */,
-				CBC85F8427B74F370043093A /* UserInfoViewController.swift */,
 				CBC85F8627B769FF0043093A /* LogInViewController.swift */,
+				CBC85F8A27BA06C50043093A /* SettingsViewController.swift */,
+				CBC85F8C27BA08650043093A /* InfoViewController.swift */,
 				CBC85F5027B73F780043093A /* ViewController.swift */,
 			);
 			path = ViewControllers;
@@ -281,14 +284,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBC85F8527B74F370043093A /* UserInfoViewController.swift in Sources */,
 				CBC85F5127B73F780043093A /* ViewController.swift in Sources */,
 				CBC85F8927B97DEA0043093A /* TemplateViewController.swift in Sources */,
 				CBC85F4D27B73F780043093A /* AppDelegate.swift in Sources */,
 				CBC85F8727B769FF0043093A /* LogInViewController.swift in Sources */,
+				CBC85F8D27BA08650043093A /* InfoViewController.swift in Sources */,
 				CBC85F4F27B73F780043093A /* SceneDelegate.swift in Sources */,
 				CBC85F7F27B748550043093A /* SignUpViewController.swift in Sources */,
 				CBC85F8127B748610043093A /* HomeViewController.swift in Sources */,
+				CBC85F8B27BA06C50043093A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

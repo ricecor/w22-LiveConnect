@@ -11,6 +11,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var SettingsButton: UIButton!
+    @IBOutlet weak var CreateButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +20,11 @@ class HomeViewController: UIViewController {
     }
     
 
+    @IBAction func SettingsTapped(_ sender: Any) {
+    }
+    @IBAction func CreateTapped(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -28,4 +35,5 @@ class HomeViewController: UIViewController {
     }
     */
 
+    
 }
