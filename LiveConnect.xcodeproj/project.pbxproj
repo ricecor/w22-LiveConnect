@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7B81FD627CB20540030310A /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B81FD527CB20540030310A /* MapScreen.swift */; };
 		CBC85F4D27B73F780043093A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC85F4C27B73F780043093A /* AppDelegate.swift */; };
 		CBC85F4F27B73F780043093A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC85F4E27B73F780043093A /* SceneDelegate.swift */; };
 		CBC85F5127B73F780043093A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC85F5027B73F780043093A /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A7B81FD527CB20540030310A /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
 		CBC85F4927B73F780043093A /* LiveConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC85F4C27B73F780043093A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBC85F4E27B73F780043093A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				CBC85F8A27BA06C50043093A /* SettingsViewController.swift */,
 				CBC85F8C27BA08650043093A /* InfoViewController.swift */,
 				CBC85F5027B73F780043093A /* ViewController.swift */,
+				A7B81FD527CB20540030310A /* MapScreen.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				CBC85F8927B97DEA0043093A /* TemplateViewController.swift in Sources */,
 				CBC85F4D27B73F780043093A /* AppDelegate.swift in Sources */,
 				CBC85F8727B769FF0043093A /* LogInViewController.swift in Sources */,
+				A7B81FD627CB20540030310A /* MapScreen.swift in Sources */,
 				CBC85F8D27BA08650043093A /* InfoViewController.swift in Sources */,
 				CBC85F4F27B73F780043093A /* SceneDelegate.swift in Sources */,
 				CBC85F7F27B748550043093A /* SignUpViewController.swift in Sources */,
