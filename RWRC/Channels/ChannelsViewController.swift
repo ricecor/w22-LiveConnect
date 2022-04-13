@@ -85,6 +85,8 @@ final class ChannelsViewController: UITableViewController {
       UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
       UIBarButtonItem(title: "Maps", style: .plain, target: self, action: #selector(mapsButton)),
       UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
+      UIBarButtonItem(title: "Invite", style: .plain, target: self, action: #selector(inviteButton)),
+      UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
       UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonPressed))
     ]
     //toolbarLabel.text = AppSettings.displayName
@@ -117,7 +119,14 @@ final class ChannelsViewController: UITableViewController {
       let newViewController = settingViewController()
       self.navigationController?.pushViewController(newViewController, animated: true)
   }
-  
+  @objc private func inviteButton(){
+    let newViewController = InvitationViewController()
+    newViewController.modalPresentationStyle = .popover
+    self.present(newViewController, animated: true) {
+
+    }
+    //self.navigationController?.pushViewController(newViewController, animated: true)
+  }
   @objc private func mapsButton(){
       let newViewController = MapsViewController()
       self.navigationController?.pushViewController(newViewController, animated: true)
@@ -145,14 +154,14 @@ final class ChannelsViewController: UITableViewController {
   }
 
   @objc private func addButtonPressed() {
-    let alertController = UIAlertController(title: "Create a new Channel", message: nil, preferredStyle: .alert)
+    let alertController = UIAlertController(title: "Create a new Group", message: nil, preferredStyle: .alert)
     alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
     alertController.addTextField { field in
       field.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
       field.enablesReturnKeyAutomatically = true
       field.autocapitalizationType = .words
       field.clearButtonMode = .whileEditing
-      field.placeholder = "Channel name"
+      field.placeholder = "Group name"
       field.returnKeyType = .done
       field.tintColor = .primary
     }

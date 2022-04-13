@@ -24,7 +24,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cRZ-l3-IxL">
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="cRZ-l3-IxL">
                     <rect key="frame" x="0.0" y="372" width="414" height="216"/>
                 </datePicker>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hxz-dI-nvx">
@@ -77,7 +77,7 @@
                 <constraint firstItem="Hxz-dI-nvx" firstAttribute="top" secondItem="gYe-r6-dgd" secondAttribute="bottom" constant="24" id="lc0-Dg-Iks"/>
                 <constraint firstItem="7OB-FX-Wtq" firstAttribute="leading" secondItem="i1O-TL-Zft" secondAttribute="leading" id="oP4-Or-tcv"/>
             </constraints>
-            <point key="canvasLocation" x="-345" y="-20"/>
+            <point key="canvasLocation" x="-346.37681159420293" y="-20.089285714285712"/>
         </view>
     </objects>
     <resources>

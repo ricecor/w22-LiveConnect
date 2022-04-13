@@ -38,12 +38,10 @@ class MapsViewController: UIViewController, MKMapViewDelegate {
     
 
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var closeButton: UIButton!
     var selectedPin: MKPlacemark? = nil
     
-    //private let currentUser: User
   
-    //var resultSearchController: UISearchController? = nil
+    var resultSearchController: UISearchController? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,31 +50,59 @@ class MapsViewController: UIViewController, MKMapViewDelegate {
         // Set initial location in near Woodland Mall
         let initialLocation = CLLocation(latitude: 42.912836,longitude: -85.584114)
         centerMapOnLocation(location: initialLocation)
-        
-//        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearch") as! LocationSearchViewController
-//        resultSearchController = UISearchController(searchResultsController: locationSearchTable)
-//        resultSearchController?.searchResultsUpdater = locationSearchTable as! UISearchResultsUpdating
-//
-//        locationSearchTable.mapView = mapView
-//        locationSearchTable.handleMapSearchDelegate = self
-//
+
+        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearch") as! LocationSearchViewController
+        let newMapSearchTable = LocationSearchViewController()
+        resultSearchController = UISearchController(searchResultsController: locationSearchTable)
+        resultSearchController?.searchResultsUpdater = locationSearchTable as! UISearchResultsUpdating
+
+        locationSearchTable.mapView = mapView
+        locationSearchTable.handleMapSearchDelegate = self
+
         //Set up the search bar
-//        let searchBar = resultSearchController!.searchBar
-//        searchBar.sizeToFit()
-//        searchBar.placeholder = "Search for places"
-//        navigationItem.titleView = resultSearchController?.searchBar
-//
-//        resultSearchController?.hidesNavigationBarDuringPresentation = false
-//        resultSearchController?.dimsBackgroundDuringPresentation = true
-//        definesPresentationContext = true
+        let searchBar = resultSearchController!.searchBar
+        searchBar.sizeToFit()
+        searchBar.placeholder = "Search for places"
+        navigationItem.titleView = resultSearchController?.searchBar
+
+        resultSearchController?.hidesNavigationBarDuringPresentation = false
+        resultSearchController?.obscuresBackgroundDuringPresentation = true
+        definesPresentationContext = true
     }
-      @IBAction func closeButtonPressed(_ sender: UIButton){
-        //let newViewController = ChannelsViewController(currentUser: currentUser)
-        //self.navigationController?.pushViewController(newViewController, animated: true)
-      }
+//      @IBAction func closeButtonPressed(_ sender: UIButton){
+//        let newViewController = ChannelsViewController(currentUser: currentUser)
+//        self.navigationController?.pushViewController(newViewController, animated: true)
+//      }
     let regionRadius: CLLocationDistance = 1000
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegion.init(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
+    }
+}
+
+//Drop a pin on the map whenever user tabs a search result
+protocol HandleMapSearch {
+    func dropPinZoomIN(placemark: MKPlacemark)
+}
+
+extension MapsViewController: HandleMapSearch {
+
+    func dropPinZoomIN(placemark: MKPlacemark) {
+        //cache the pin
+        selectedPin = placemark
+        //clear existing pins
+        mapView.removeAnnotations(mapView.annotations)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = placemark.coordinate
+
+//        if let city = placemark.locality,
+//           let state = placemark.administrativeArea {
+//            annotation.subtitle = "(city) (state)"
+//        }
+        mapView.addAnnotation(annotation)
+
+        let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+        let region = MKCoordinateRegion(center: placemark.coordinate, span: span)
+        mapView.setRegion(region, animated: true)
     }
 }

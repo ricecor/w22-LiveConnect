@@ -33,14 +33,77 @@
 import UIKit
 import FirebaseAuth
 
-final class settingViewController: UIViewController {
+final class settingViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var prefButton: UIButton!
     @IBOutlet weak var birthdayButton: UIButton!
     @IBOutlet weak var languageButton: UIButton!
     @IBOutlet weak var birthPicker: UIDatePicker!
     @IBOutlet weak var langPicker: UIPickerView!
-    
-  override func viewDidLoad() {
-    super.viewDidLoad()
+    @IBOutlet weak var langSelection: UILabel!
+    var langPickerData: [String] = [String]()
+
+    override func viewDidLoad() {
+      super.viewDidLoad()
+
+      self.langPicker.delegate = self
+      self.langPicker.dataSource = self
+
+      langPickerData = ["English", "Spanish (Coming Soon!)", "Mandarin (Coming Soon!)", "French (Coming Soon!)", "Russian (Not Coming as Soon!)"]
+    }
+
+  @objc(numberOfComponentsInPickerView:) func numberOfComponents(in pickerView: UIPickerView) -> Int {
+      return 1
+    }
+
+  func pickerView( _ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+      return langPickerData.count
+    }
+
+  internal func pickerView( _ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+          return langPickerData[row]
+      }
   }
-}
+//  func loanLabelTap() {
+//      let tapSelect = UITapGestureRecognizer(target: self, action: #selector(self.pickerTapped))
+//      self.langSelection.isUserInteractionEnabled = true
+//      self.langSelection.addGestureRecognizer(tapSelect)
+//  }
+//
+//  @objc func pickerTapped(sender: UITapGestureRecognizer){
+//      print("gesture recognizer tapped.")
+//      self.langPicker.isHidden = false
+//      self.lPickerData = ["English", "Spanish (Coming Soon!)", "Mandarin (Coming Soon!)", "French (Coming Soon!)", "German (Coming Soon!)", "Russian (Coming Soon!)"]
+//      self.langPicker.reloadAllComponents()
+//      self.langPicker.isHidden = false
+//      self.isLang = true
+//
+//  }
+//}
+
+//extension settingViewController: UIPickerViewDataSource, UIPickerViewDelegate{
+//  func numberOfComponents(in: UIPickerView) -> Int
+//  {
+//      return 1
+//  }
+//
+//  // The number of rows of data
+//  func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
+//  {
+//      return lPickerData.count
+//  }
+//
+//  func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
+//  {
+//      return self.lPickerData[row]
+//  }
+//
+//  func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+//  {
+//      if self.isLang{
+//        self.langSelection.text = self.lPickerData[row]
+//          self.lSelect = self.lPickerData[row]
+//      }
+//  }
+//
+//}
+

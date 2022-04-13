@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>478944986172-cnvj4s3ehdpnsj1l6e8eama8b09lfhvg.apps.googleusercontent.com</string>
+	<string>408092627475-p71hmdi5c6rg9h2jbsk7vkc57c0h8sb3.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.478944986172-cnvj4s3ehdpnsj1l6e8eama8b09lfhvg</string>
+	<string>com.googleusercontent.apps.408092627475-p71hmdi5c6rg9h2jbsk7vkc57c0h8sb3</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCbkPsy16OjVB4bRJCpIw9kcQ24NIRlkyY</string>
+	<string>AIzaSyBrf09I352hcDVHXeaqiGthTvIFXLHfLGo</string>
 	<key>GCM_SENDER_ID</key>
-	<string>478944986172</string>
+	<string>408092627475</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.RiceCor.LiveConnectw22</string>
+	<string>com.ricecor.LiveConnect</string>
 	<key>PROJECT_ID</key>
-	<string>liveconnectdatabase</string>
+	<string>w22-liveconnect</string>
 	<key>STORAGE_BUCKET</key>
-	<string>liveconnectdatabase.appspot.com</string>
+	<string>w22-liveconnect.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:478944986172:ios:c40ebb51a94f7113cc6f39</string>
+	<string>1:408092627475:ios:b73537e9d41ff7e0d765e6</string>
 </dict>
 </plist>

@@ -34,23 +34,24 @@ import UIKit
 import FirebaseAuth
 
 final class LoginViewController: UIViewController {
+  @IBOutlet weak var signUpButton: UIButton!
   @IBOutlet private var actionButton: UIButton!
   @IBOutlet private var fieldBackingView: UIView!
   @IBOutlet private var displayNameField: UITextField!
   @IBOutlet private var actionButtonBackingView: UIView!
   @IBOutlet private var bottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var emailTextLabel: UILabel!
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var passwordLabel: UILabel!
-    
+  @IBOutlet weak var emailTextLabel: UILabel!
+  @IBOutlet weak var emailField: UITextField!
+  @IBOutlet weak var passwordField: UITextField!
+  @IBOutlet weak var passwordLabel: UILabel!
+  
   override var preferredStatusBarStyle: UIStatusBarStyle {
     return .lightContent
   }
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
+    signUpButton.addTarget(self, action: #selector(signupButtonPressed), for: .touchUpInside)
     fieldBackingView.smoothRoundCorners(to: 8)
     actionButtonBackingView.smoothRoundCorners(to: actionButtonBackingView.bounds.height / 2)
 
@@ -72,6 +73,11 @@ final class LoginViewController: UIViewController {
   // MARK: - Actions
   @IBAction private func actionButtonPressed() {
     signIn()
+  }
+  @objc private func signupButtonPressed(){
+    print("Button Pressed")
+    let signViewController = signUpViewController()
+    self.navigationController?.pushViewController(signViewController, animated: true)
   }
 
   @objc private func textFieldDidReturn() {
