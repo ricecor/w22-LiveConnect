@@ -12,8 +12,7 @@
         <!--Maps View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="Y6W-OH-hqX" customClass="MapsViewController" customModule="RWRC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="MapsViewController" customModule="RWRC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3JA-G3-uO5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,14 +30,18 @@
                             <constraint firstItem="RXl-39-Xco" firstAttribute="top" secondItem="3JA-G3-uO5" secondAttribute="top" id="xaL-e9-SYd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="RXl-39-Xco" id="ThU-VM-VF1"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="119" y="89"/>
         </scene>
         <!--Location Search View Controller-->
         <scene sceneID="7oY-Sl-25x">
             <objects>
-                <tableViewController id="iyD-X5-gzi" customClass="LocationSearchViewController" customModule="RWRC" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LocationSearch" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iyD-X5-gzi" customClass="LocationSearchViewController" customModule="RWRC" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="NfZ-dB-Sat">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

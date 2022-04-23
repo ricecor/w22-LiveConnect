@@ -116,6 +116,7 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Sign-up"/>
                     <connections>
+                        <action selector="signButtonPressed:" destination="-1" eventType="touchUpInside" id="5ce-rs-Snd"/>
                         <action selector="signupButtonPressed" destination="-1" eventType="touchUpInside" id="Knp-Vn-kVf"/>
                     </connections>
                 </button>

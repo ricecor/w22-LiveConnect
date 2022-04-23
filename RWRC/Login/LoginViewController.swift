@@ -51,7 +51,7 @@ final class LoginViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    signUpButton.addTarget(self, action: #selector(signupButtonPressed), for: .touchUpInside)
+    //signUpButton.addTarget(self, action: #selector(signupButtonPressed), for: .touchUpInside)
     fieldBackingView.smoothRoundCorners(to: 8)
     actionButtonBackingView.smoothRoundCorners(to: actionButtonBackingView.bounds.height / 2)
 
@@ -75,12 +75,16 @@ final class LoginViewController: UIViewController {
     signIn()
   }
   @objc private func signupButtonPressed(){
-    print("Button Pressed")
-    let signViewController = signUpViewController()
-    self.navigationController?.pushViewController(signViewController, animated: true)
+   
   }
 
-  @objc private func textFieldDidReturn() {
+  @IBAction func signButtonPressed(_ sender: Any) {
+    print("Button Pressed")
+    let signVC = signUpViewController()
+    self.navigationController?.pushViewController(signVC, animated: true)
+  }
+  
+    @objc private func textFieldDidReturn() {
     signIn()
   }
 

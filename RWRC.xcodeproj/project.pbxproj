@@ -16,7 +16,7 @@
 		306FC7EA27EC750100AD5EAF /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306FC7E927EC750100AD5EAF /* MapsViewController.swift */; };
 		306FC7F527ECA19000AD5EAF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 306FC7F427ECA19000AD5EAF /* GoogleService-Info.plist */; };
 		306FC7F727F26ABB00AD5EAF /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306FC7F627F26ABB00AD5EAF /* LocationSearchViewController.swift */; };
-		306FC7FC280514FA00AD5EAF /* signUpViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 306FC7FB280514FA00AD5EAF /* signUpViewViewController.xib */; };
+		306FC7FC280514FA00AD5EAF /* signUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 306FC7FB280514FA00AD5EAF /* signUpViewController.xib */; };
 		306FC7FE2805153300AD5EAF /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306FC7FD2805153300AD5EAF /* signUpViewController.swift */; };
 		306FC803280729F300AD5EAF /* InvitationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306FC802280729F300AD5EAF /* InvitationViewController.storyboard */; };
 		306FC80628072A3F00AD5EAF /* InvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306FC80428072A3F00AD5EAF /* InvitationViewController.swift */; };
@@ -56,7 +56,7 @@
 		306FC7E927EC750100AD5EAF /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		306FC7F427ECA19000AD5EAF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		306FC7F627F26ABB00AD5EAF /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
-		306FC7FB280514FA00AD5EAF /* signUpViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = signUpViewViewController.xib; sourceTree = "<group>"; };
+		306FC7FB280514FA00AD5EAF /* signUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = signUpViewController.xib; sourceTree = "<group>"; };
 		306FC7FD2805153300AD5EAF /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		306FC802280729F300AD5EAF /* InvitationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InvitationViewController.storyboard; sourceTree = "<group>"; };
 		306FC80428072A3F00AD5EAF /* InvitationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationViewController.swift; sourceTree = "<group>"; };
@@ -156,7 +156,7 @@
 		306FC7FA280514BC00AD5EAF /* Sign Up Screen */ = {
 			isa = PBXGroup;
 			children = (
-				306FC7FB280514FA00AD5EAF /* signUpViewViewController.xib */,
+				306FC7FB280514FA00AD5EAF /* signUpViewController.xib */,
 				306FC7FD2805153300AD5EAF /* signUpViewController.swift */,
 			);
 			path = "Sign Up Screen";
@@ -298,7 +298,7 @@
 				306FC7E527EC6B8D00AD5EAF /* settingViewController.xib in Resources */,
 				180DC61523C78D9800486B1A /* LaunchScreen.storyboard in Resources */,
 				306FC80928072C7700AD5EAF /* MapsViewController.storyboard in Resources */,
-				306FC7FC280514FA00AD5EAF /* signUpViewViewController.xib in Resources */,
+				306FC7FC280514FA00AD5EAF /* signUpViewController.xib in Resources */,
 				185CB20523C78CE8009F7571 /* Assets.xcassets in Resources */,
 				306FC7F527ECA19000AD5EAF /* GoogleService-Info.plist in Resources */,
 			);

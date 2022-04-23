@@ -33,6 +33,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
+//import FirebaseMLModelDownloader
 
 
 final class ChannelsViewController: UITableViewController {
@@ -120,16 +121,14 @@ final class ChannelsViewController: UITableViewController {
       self.navigationController?.pushViewController(newViewController, animated: true)
   }
   @objc private func inviteButton(){
-    let newViewController = InvitationViewController()
-    newViewController.modalPresentationStyle = .popover
-    self.present(newViewController, animated: true) {
-
-    }
-    //self.navigationController?.pushViewController(newViewController, animated: true)
+    let storyboard = UIStoryboard(name: "InvitationViewController", bundle: nil)
+    let inviteVC = storyboard.instantiateViewController(identifier: "InvitationViewController")
+    show(inviteVC, sender: self)
   }
   @objc private func mapsButton(){
-      let newViewController = MapsViewController()
-      self.navigationController?.pushViewController(newViewController, animated: true)
+    let storyboard = UIStoryboard(name: "MapsViewController", bundle: nil)
+    let secondVC = storyboard.instantiateViewController(identifier: "MapsViewController")
+    show(secondVC, sender: self)
   }
   @objc private func signOut() {
     let alertController = UIAlertController(
